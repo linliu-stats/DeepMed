@@ -1,0 +1,6 @@
+export("DeepMed")
+importFrom("stats", "pnorm", "qnorm")
+importFrom("stats", "predict")
+importFrom("utils", "write.table")
+import("keras")
+import("foreach")
