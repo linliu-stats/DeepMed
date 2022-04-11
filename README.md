@@ -8,7 +8,7 @@ Use the following command in R to install the package:
 install.packages(pkgs="keras")  # install the "keras" package
 install.packages(pkgs="foreach")  # install the "foreach" package
 library(devtools)
-install_github("siqixu/ DeepMed",ref="main") # install the " DeepMed " package
+install_github("siqixu/DeepMed",ref="main") # install the " DeepMed " package
 ```
 ## Usage
 ```
