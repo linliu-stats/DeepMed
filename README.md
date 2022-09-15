@@ -16,13 +16,13 @@ install_github("siqixu/DeepMed",ref="main") # install the "DeepMed" package
 ```
 DeepMed(y,d,m,x,hyper_grid,epochs=500,hyper,cv=TRUE,trim=0.05)
 ```
-`y`: The outcome variable in causal mediation analysis.
+`y`: A numeric vector for the outcome variable in causal mediation analysis.
 
-`d`: The binary treatment variable in causal mediation analysis, which is coded as 0 or 1.
+`d`: A numeric vector for the binary treatment variable in causal mediation analysis, which is coded as 0 or 1.
 
-`m`: The mediator variable in causal mediation analysis.
+`m`: A numeric vector for the mediator variable in causal mediation analysis.
 
-`x`: The covariates in causal mediation analysis.
+`x`: A numeric vector or matrix for the covariates in causal mediation analysis.
 
 `hyper_grid`: A grid of candidate hyperparameters for deep neural networks. It is a numeric matrix with three columns for the number of hidden units, number of hidden layers, and L1 regularizition parameter in the input layer, respecively. "hyper_grid" should be provided if cv==TRUE, then a 3-fold cross-validation will be used to select the hyperparameters.
 
