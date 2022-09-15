@@ -59,7 +59,9 @@ l1 = c(0,0.05,0.1)  # the L1 regularizition parameter of the input layer
 layer = c(1:3)      # the number of hidden layers
 unit = c(10,20,50)  # the number of hidden units
 hyper_grid=expand.grid(unit,layer,l1) # create a grid of candidate hyperparameters
-DeepMed(y,d,m,x,hyper_grid,cv=TRUE)
+
+# run DeepMed on the example data with 6150 observations and two covariates. The computation time is around 1 hour. 
+DeepMed(y,d,m,x,hyper_grid,cv=TRUE)  
 ```
 
   
