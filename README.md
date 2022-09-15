@@ -24,20 +24,20 @@ DeepMed(y,d,m,x,hyper_grid,epochs=500,hyper,cv=TRUE,trim=0.05)
 
 `x`: A numeric vector or matrix for the covariates in causal mediation analysis.
 
-`hyper_grid`: A grid of candidate hyperparameters for deep neural networks. It is a numeric matrix with three columns for the number of hidden units, number of hidden layers, and L1 regularizition parameter in the input layer, respecively. "hyper_grid" should be provided if cv==TRUE, then a 3-fold cross-validation will be used to select the hyperparameters.
+`hyper_grid`: A grid of candidate hyperparameters for deep neural networks. It is a numeric matrix with three columns for the number of hidden units, the number of hidden layers, and L1 regularizition parameter in the input layer, respecively. "hyper_grid" should be provided if cv==TRUE, then a 3-fold cross-validation will be used to select the hyperparameters.
 
-`epochs`: The maximum number of candidate epochs.
+`epochs`: The maximum number of candidate epochs. By default, epochs=500.
 
 `hyper`: The hyperparameters of neural networks, i.e., L1 regularizition parameter, the number of hidden layers, the number of hidden units and epochs. The neural networks with hyperparameters specified by "hyper" will be used in a 3-fold cross-fitting to estiamte the nuisance parameters in the influence functions for the mean potential outcomes. "hyper" should be provided if cv==FALSE.
   
-`cv`: If cv==TRUE, then "hyper_grid" should be provided and a 3-fold cross-validation will be used to select hyperparameters among "hyper_grid". Otherwise, hyperparameters should be provided in the argument "hyper".
+`cv`: If cv==TRUE, then "hyper_grid" should be provided and a 3-fold cross-validation will be used to select hyperparameters among "hyper_grid". Otherwise, hyperparameters should be provided in the argument "hyper". By default, cv=TRUE.
   
-`trim`: The trimming rate for preventing conditional treatment or mediator probabilities from being zero. Observations with any denominators in the potential outcomes smaller than the trimming rate will be excluded from the analysis.
+`trim`: The trimming rate for preventing conditional treatment or mediator probabilities from being zero. Observations with any denominators in the potential outcomes smaller than the trimming rate will be excluded from the analysis. By default, trim=0.05.
 
 ## Value
 `results`: The estimates (effect), standard errors (se) and P values (p-val) of the total treatment effect (total), (in)direct treatment effect in treated ((in)dir.treat), and (in)direct treatment effect in control group ((in)indir.control).
  
-`ntrimmed`: The number of observations being excluded due to the denominators in the potential outcomes smaller than the trimming rate.
+`ntrimmed`: The number of observations being excluded due to the denominators in the potential outcomes smaller than the trimming rate. 
 
 
 ## Details
