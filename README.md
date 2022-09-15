@@ -18,7 +18,7 @@ DeepMed(y,d,m,x,hyper_grid,epochs=500,hyper,cv=TRUE,trim=0.05)
 ```
 `y`: The outcome variable in causal mediation analysis.
 
-`d`: The exposure variable in causal mediation analysis.
+`d`: The binary treatment variable in causal mediation analysis, which is coded as 0 or 1.
 
 `m`: The mediator variable in causal mediation analysis.
 
