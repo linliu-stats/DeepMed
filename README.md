@@ -1,4 +1,4 @@
-# DeepMed: Semiparametric Causal Mediation Analysis with Deep Learning
+# DeepMed: Semiparametric Causal Mediation Analysis with Debiased Deep Learning
 DeepMed is an approach for semi-parametric causal mediation analysis to estimate the natrual (in)direct effects of a binary treatment on an outcome of interet. DeepMed adopts the deep neural networks to estimate the nuisance parameters involved in the influence functions of the potential outcomes.
 ## Setup
 The DeepMed package will use the R package "keras" to establish the neural networks. It also depends on the R package "foreach" for parallel computation. Therefore, make sure that these packages have been installed.
